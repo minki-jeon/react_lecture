@@ -6,6 +6,7 @@ import {
   Nav,
   Modal,
   Button,
+  Form,
 } from "react-bootstrap";
 import { GrPrevious, GrNext } from "react-icons/gr";
 import { useState } from "react";
@@ -15,6 +16,19 @@ function App18() {
 
   return (
     <div>
+      <Form.Group controlId="idInput">
+        <Form.Label>아이디</Form.Label>
+        <Form.Control />
+      </Form.Group>
+      <Form.Group controlId="passwordInput">
+        <Form.Label>패스워드</Form.Label>
+        <Form.Control type="password" />
+      </Form.Group>
+      <Form.Group controlId="contentTextarea">
+        <Form.Label>본문</Form.Label>
+        <Form.Control as="textarea" />
+      </Form.Group>
+      <hr />
       <Button onClick={() => setShow(!show)}>모달 예제</Button>
       <Modal show={show} onHide={() => setShow(!show)}>
         <Modal.Header closeButton={true}>
