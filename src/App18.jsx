@@ -7,6 +7,7 @@ import {
   Modal,
   Button,
   Form,
+  FloatingLabel,
 } from "react-bootstrap";
 import { GrPrevious, GrNext } from "react-icons/gr";
 import { useState } from "react";
@@ -16,6 +17,16 @@ function App18() {
 
   return (
     <div>
+      <FloatingLabel label="아이디를 입력해주세요." controlId="idFloatingInput">
+        <Form.Control placeholder="아이디를 입력해주세요." />
+      </FloatingLabel>
+      <FloatingLabel
+        label="패스워드를 입력해주세요."
+        controlId="passwordFloatingInput"
+      >
+        <Form.Control type="password" placeholder="패스워드를 입력해주세요." />
+      </FloatingLabel>
+      <hr />
       <Form.Group controlId="idInput">
         <Form.Label>아이디</Form.Label>
         <Form.Control />
