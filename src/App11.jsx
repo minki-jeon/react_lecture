@@ -13,6 +13,17 @@ function App11() {
   // 브라우저 컴포넌트 props : html attribute를 사용
   // - HTML 키워드 => Javascript 키워드 : for => htmlFor, class => className
 
+  // style prop : = style attribute
+  // - Javascript 키워드 : 객체 타입 형식으로 작성 , (kebab-case => CamelCase)
+  /*
+  ** style attribute **
+  <div style="color: red; background-color: yellow; font-size: 24px;"></div>
+   */
+  /*
+  ** style attribute **
+  <div style={{color: "red", backgroundColor: "yellow", fontSize: "24px"}}> </div>
+   */
+
   return (
     <>
       <MyComp1 color="red">작성된 컨텐츠</MyComp1>
@@ -30,6 +41,24 @@ function App11() {
       <input type="text" name="" id="nameInput" />
       <hr />
       <div className="content">hello</div>
+      <hr />
+      <div
+        style={{ color: "red", backgroundColor: "yellow", fontSize: "24px" }}
+      >
+        스타일 props 사용
+      </div>
+      <hr />
+      <button
+        style={{
+          color: "skyblue",
+          backgroundColor: "black",
+          padding: "10px",
+          borderRadius: "5px",
+          fontSize: "2em",
+        }}
+      >
+        버튼
+      </button>
     </>
   );
 }
