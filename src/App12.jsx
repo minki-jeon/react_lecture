@@ -30,6 +30,7 @@ function App12() {
 const myAddress = "seoul";
 // export {현재 파일의 함수(|변수|값)} 을 내보내기
 // - named export
+// eslint-disable-next-line react-refresh/only-export-components
 export { MyAwesomeButton, myAddress };
 // - default export
 export default App12;

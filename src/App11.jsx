@@ -64,6 +64,7 @@ function App11() {
 }
 
 const myAddress = "jeju";
+// eslint-disable-next-line react-refresh/only-export-components
 export { myAddress };
 
 export default App11;
