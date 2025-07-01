@@ -8,6 +8,7 @@ import {
   Button,
   Form,
   FloatingLabel,
+  Carousel,
 } from "react-bootstrap";
 import { GrPrevious, GrNext } from "react-icons/gr";
 import { useState } from "react";
@@ -17,6 +18,93 @@ function App18() {
 
   return (
     <div>
+      <Carousel>
+        <Carousel.Item>
+          <img className="d-block w-100" src="/public/bee.jpg" alt="" />
+          <Carousel.Caption>
+            <h3>꿀벌</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Asperiores assumenda at cum dolor ducimus earum eligendi in
+              inventore ipsa ipsam iste iure molestiae quam quas, quibusdam,
+              repudiandae saepe unde ut.
+            </p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100" src="/public/bear.jpg" alt="" />
+          <Carousel.Caption>
+            <h3>아기곰</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
+              aperiam, autem dicta dolores doloribus, ea exercitationem harum
+              ipsum odit officiis optio praesentium quisquam, reiciendis sit
+              vero. Aperiam assumenda excepturi saepe!
+            </p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100" src="/public/eagle.jpg" alt="" />
+          <Carousel.Caption>
+            <h3>독수리</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum
+              eos ipsum nemo odit officiis quam recusandae sapiente voluptatibus
+              voluptatum! Autem consequuntur deleniti deserunt impedit inventore
+              modi officia perspiciatis temporibus.
+            </p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100" src="/public/bull.jpg" alt="" />
+          <Carousel.Caption>
+            <h3>황소</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
+              eligendi, eum ipsam iusto molestiae quasi rerum sed? Ab aliquam,
+              eos excepturi fuga iusto minus pariatur possimus qui quos rerum
+              temporibus?
+            </p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100" src="/public/lion.jpg" alt="" />
+          <Carousel.Caption>
+            <h3>사자</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum
+              error iure optio repudiandae. Eligendi facilis incidunt, molestiae
+              nemo obcaecati pariatur perferendis placeat quae qui quis rerum
+              similique soluta vero! Deleniti.
+            </p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100" src="/public/shark.jpg" alt="" />
+          <Carousel.Caption>
+            <h3>상어</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Accusamus aspernatur dolor, facere, fugiat ipsa ipsam nemo porro
+              provident rerum similique sunt tenetur, voluptates voluptatibus!
+              Expedita illum inventore suscipit ullam voluptates.
+            </p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100" src="/public/tiger.jpg" alt="" />
+          <Carousel.Caption>
+            <h3>호랑이</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+              consectetur cum, delectus earum facilis fugiat in neque nostrum
+              optio, quos, repudiandae saepe ullam unde vel voluptates. A
+              delectus eum reiciendis.
+            </p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
+      <hr />
       <FloatingLabel label="아이디를 입력해주세요." controlId="idFloatingInput">
         <Form.Control placeholder="아이디를 입력해주세요." />
       </FloatingLabel>
