@@ -63,4 +63,7 @@ function App11() {
   );
 }
 
+const myAddress = "jeju";
+export { myAddress };
+
 export default App11;
