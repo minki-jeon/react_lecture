@@ -28,7 +28,7 @@ function App12() {
 }
 
 const myAddress = "seoul";
-// export {현재 파일의 함수(|변수|값)을 내보내기
+// export {현재 파일의 함수(|변수|값)} 을 내보내기
 // - named export
 export { MyAwesomeButton, myAddress };
 // - default export
