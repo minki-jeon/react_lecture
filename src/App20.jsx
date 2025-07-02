@@ -1,7 +1,10 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 
-function AwesomeButton({ children, onClick }) {
+function AwesomeButton({
+  children,
+  onClick = () => console.log("멋진버튼1 클릭"),
+}) {
   return (
     <button
       onClick={onClick}
@@ -34,7 +37,7 @@ function AwesomeHeader({ children, onDoubleClick }) {
     </h1>
   );
 }
-// TODO : 복습
+// TODO : propTypes ???
 // AwesomeHeader.propTypes = {
 //   onDoubleClick: PropTypes.func,
 //   children: PropTypes.node
@@ -60,9 +63,12 @@ function App20(props) {
       <button onClick={() => console.log("보통의 버튼 클릭")}>
         브라우저 컴포넌트 버튼
       </button>
+      {/* 컴포넌트의 event prop (onClick) + 컨텐츠(Children) */}
       <AwesomeButton onClick={() => console.log("멋진버튼1 클릭")}>
         멋진버튼1
       </AwesomeButton>
+      <AwesomeButton>멋진버튼2</AwesomeButton>
+
       <Button
         variant="outline-secondary"
         onClick={() => console.log("부트스트랩 버튼 클릭")}
