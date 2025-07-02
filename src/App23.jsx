@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-// TODO : { }로 감싸야하는 이유????????
+// React : default export
+// useState : named export
 function MyComp1() {
   let count = 1;
 
@@ -176,12 +177,16 @@ function App23(props) {
       {/* 스타일 변경 */}
       <MyComp5 />
       <hr />
+      {/* 설정한 텍스트 출력 */}
       <MyComp4 />
       <hr />
+      {/* 분해할당, 숫자 증가 출력 */}
       <MyComp3 />
       <hr />
+      {/* useState 기본 사용 */}
       <MyComp2 />
       <hr />
+      {/* 단순 값 변경 => 화면에 렌더링 되지않는다. */}
       <MyComp1 />
     </div>
   );
