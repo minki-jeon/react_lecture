@@ -39,9 +39,9 @@ function MyComp1() {
 }
 
 // component의 lifecycle :
-//     - initial render : 컴포넌트 트리에 붙을 때
-//     - re-render : 상태가 변경될 때
-//     - 컴포넌트 트리에서 떨어짐
+//     - initial render (= mount): 컴포넌트 트리에 붙을 때
+//     - re-render (= update) : 상태가 변경될 때
+//     - unmount : 컴포넌트 트리에서 떨어짐
 // => useEffect : component의 lifecycle에 맞춰(단계별) 실행시킬 수 있는 메소드를 갖고있다.
 function App36(props) {
   return (
