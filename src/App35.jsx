@@ -112,8 +112,6 @@ function ChildComp31() {
 
 // step1. create context
 const MsgContext = createContext(null);
-const ListContext = createContext(<li></li>);
-
 function MyComp3() {
   const [message, setMessage] = useState("");
 
@@ -132,17 +130,19 @@ function MyComp3() {
   );
 }
 
+// step1. create context
+const ListContext = createContext(null);
 function ChildComp43() {
   // step2. use context
-  const item = useContext(ListContext);
+  const list = useContext(ListContext);
 
   return (
     <div>
       <h3>
         <ul>
           {/*  목록 출력 */}
-          {item.map((i) => (
-            <li>{i}</li>
+          {list.map((item) => (
+            <li>{item}</li>
           ))}
         </ul>
       </h3>
@@ -168,17 +168,18 @@ function MyComp4() {
   const [list, setList] = useState([]);
   // list를 context 사용해서 ChildComp43에서 출력해보기 실습
   return (
-    <div>
-      <input
-        type="text"
-        value={item}
-        onChange={(e) => setItem(e.target.value)}
-      />
-      <button onClick={() => setList([...list, item])}>추가</button>
-      <ListContext value={list}>
+    // step3. provide context
+    <ListContext value={list}>
+      <div>
+        <input
+          type="text"
+          value={item}
+          onChange={(e) => setItem(e.target.value)}
+        />
+        <button onClick={() => setList([...list, item])}>추가</button>
         <ChildComp41 />
-      </ListContext>
-    </div>
+      </div>
+    </ListContext>
   );
 }
 
