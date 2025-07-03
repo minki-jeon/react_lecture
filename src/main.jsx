@@ -3,10 +3,10 @@ import { createRoot } from "react-dom/client";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import App31 from "./App31.jsx";
+import App37 from "./App37.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <App31 />
-  </StrictMode>,
+  // <StrictMode>
+  <App37 />,
+  // </StrictMode>,
 );
