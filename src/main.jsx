@@ -3,10 +3,11 @@ import { createRoot } from "react-dom/client";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import App37 from "./App37.jsx";
+import App52 from "./App52.jsx";
 
 createRoot(document.getElementById("root")).render(
+  // strict mode : 렌더링할 때, 모든 컴포넌트를 [마운트->언마운트->마운트] 과정을 수행한다.
   // <StrictMode>
-  <App37 />,
+  <App52 />,
   // </StrictMode>,
 );
