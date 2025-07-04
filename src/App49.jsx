@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Outlet, Route, Routes } from "react-router";
+import { BrowserRouter, Link, Outlet, Route, Routes } from "react-router";
 
 function ReactLayout() {
   return (
@@ -9,14 +9,17 @@ function ReactLayout() {
           className="col-3"
           style={{ background: "skyblue", fontSize: "2rem" }}
         >
+          {/* 전체 페이지를 다시 마운트하지않으려면,
+                a 태그 대신 ReactRouter의 Link Component 사용 */}
           <div className="border">
-            <a href="./install">install</a>
+            {/* a href => Link to */}
+            <Link to="./install">install</Link>
           </div>
           <div className="border">
-            <a href="./game">game</a>
+            <Link to="./game">game</Link>
           </div>
           <div className="border">
-            <a href="./state">state</a>
+            <Link to="./state">state</Link>
           </div>
         </div>
         <div
