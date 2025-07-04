@@ -1,5 +1,13 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Link, Outlet, Route, Routes } from "react-router";
+import {
+  BrowserRouter,
+  Link,
+  NavLink,
+  Outlet,
+  Route,
+  Routes,
+} from "react-router";
+import "./assets/mystyle.css";
 
 // /react/learn
 // /react/tutorial
@@ -17,20 +25,22 @@ function ReactLayout() {
       <div className="d-flex justify-content-around">
         <div>NAVBAR</div>
         <div>
+          {/*<a href="/react/learn">LEARN</a>*/}
           {/* 전체 페이지를 다시 마운트하지않으려면,
                 a 태그 대신 ReactRouter의 Link Component 사용 */}
 
-          {/*<a href="/react/learn">LEARN</a>*/}
-          <Link to="/react/learn">LEARN</Link>
+          {/*<Link to="/react/learn">LEARN</Link>*/}
+          {/* NavLink : 현재 경로와 to prop의 값이 같으면 active class 추가한다 */}
+          <NavLink to="/react/learn">LEARN</NavLink>
         </div>
         <div>
-          <Link to="/react/tutorial">TUTORIAL</Link>
+          <NavLink to="/react/tutorial">TUTORIAL</NavLink>
         </div>
         <div>
-          <Link to="/react/docs">DOCS</Link>
+          <NavLink to="/react/docs">DOCS</NavLink>
         </div>
         <div>
-          <Link to="/react/api">API</Link>
+          <NavLink to="/react/api">API</NavLink>
         </div>
       </div>
       {/*자식 경로의 컴포넌트가 출력되는 곳*/}
