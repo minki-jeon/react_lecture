@@ -22,7 +22,7 @@ function MyLayout() {
         <Button onClick={() => navigate("/asd")} variant="outline-info">
           ASD
         </Button>
-
+        {/* navigate(NUMBER) history(방문기록) 기준으로 이동 */}
         <Button onClick={() => navigate(-1)}>뒤로가기</Button>
       </div>
       <div>
