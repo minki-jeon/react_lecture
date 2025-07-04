@@ -43,7 +43,7 @@ function App42(props) {
       <BrowserRouter>
         <Routes>
           <Route path="learn" element={<Learn />}></Route>
-          <Route path="tutorial" element={<Tutorial />}></Route>
+          <Route path="tutorial" element={<h3>React 공부하기</h3>}></Route>
           <Route path="install" element={<Install />}></Route>
           <Route path="reference/react" element={<ReferenceReact />}></Route>
         </Routes>
