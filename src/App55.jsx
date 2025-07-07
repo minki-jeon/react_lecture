@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 function App55(props) {
+  const [myFile, setMyFile] = useState([]);
+
   function handleButton1Click() {
     axios.put("/api/main30/sub1");
   }
@@ -31,9 +33,35 @@ function App55(props) {
     });
   }
 
+  function handleButton6Click() {
+    axios.delete("api/main30/sub6", {
+      params: {
+        name: "son",
+        id: 77,
+      },
+    });
+  }
+
+  function handleButton7Click() {
+    // file 전송시 postForm 또는 putForm
+    axios.postForm("/api/main30/sub7", {
+      myFile: myFile,
+      name: "흥민",
+      age: 33,
+    });
+  }
+
   return (
     <div>
-      <button onClick={handleButton5Click}>5 put 요청</button>
+      <div>
+        <input type="file" onChange={(e) => setMyFile(e.target.files[0])} />
+        <button onClick={handleButton7Click}>7 post w/ file</button>
+        <hr />
+      </div>
+
+      <button onClick={handleButton6Click}>6 delete /w 요청</button>
+      <hr />
+      <button onClick={handleButton5Click}>5 put /w 요청</button>
       <hr />
       <button onClick={handleButton4Click}>4 delete 요청</button>
       <hr />
