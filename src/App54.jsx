@@ -37,8 +37,79 @@ function App54(props) {
     });
   }
 
+  function handleButton7Click() {
+    axios.post("/api/main29/sub7", {
+      address: "seoul",
+      score: 88.12,
+      age: 33,
+      married: true,
+    });
+  }
+
+  function handleButton8Click() {
+    axios.post("/api/main29/sub8", {
+      address: "강남",
+      age: 77,
+      fruits: ["apple", "lemon", "mango"], // array
+    });
+  }
+
+  function handleButton9Click() {
+    axios.post("/api/main29/sub9", {
+      name: "son",
+      teams: ["서울", "런던", "제주"],
+      // Object
+      person: {
+        name: "흥민",
+        address: "서울",
+        age: 33,
+      },
+    });
+  }
+
+  function handleButton10Click() {
+    axios.post("/api/main29/sub10", {
+      cityList: ["서울", "경기", "부산"],
+      team: { name: "토트넘", location: "런던" },
+    });
+  }
+
+  function handleButton11Click() {
+    axios.post("/api/main29/sub11", ["java", "boot", "spring"]);
+  }
+
+  function handleButton12Click() {
+    axios.post("/api/main29/sub12", [
+      {
+        name: "손",
+        age: 55,
+        address: "서울",
+      },
+      {
+        name: "박",
+        age: 66,
+        address: "수원",
+      },
+      { name: "차", age: 77, address: "인천" },
+    ]);
+  }
+
   return (
     <div>
+      <button onClick={handleButton12Click}>post 12 arrayObject</button>
+      <hr />
+      <button onClick={handleButton11Click}>post 11 array</button>
+      <hr />
+      <button onClick={handleButton10Click}>post 10 w/ data (object)</button>
+      <hr />
+      <button onClick={handleButton9Click}>post 9 w/ data (object)</button>
+      <hr />
+      <button onClick={handleButton8Click}>post 8 w/ data (array)</button>
+      <hr />
+      <button onClick={handleButton7Click}>
+        post 7 w/ data (boolean, string, number)
+      </button>
+      <hr />
       <button onClick={handleButton6Click}>
         post 6 w/ data (boolean, string, number, null)
       </button>
