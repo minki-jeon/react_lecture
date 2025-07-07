@@ -94,8 +94,39 @@ function App54(props) {
     ]);
   }
 
+  function handleButton13Click() {
+    axios.post("/api/main29/sub13", {
+      nickName: "흥민", //string
+      // object
+      team: {
+        name: "토트넘",
+        location: "런던",
+      },
+      age: 33, // number
+      married: false, // boolean
+      address: ["서울", "런던", "베를린"], // array
+    });
+  }
+
+  function handleButton14Click() {
+    axios.post("/api/main29/sub14", {
+      person: {
+        name: "흥민",
+        age: 55,
+      },
+      city: "서울",
+      score: 88.12,
+      checked: true,
+      fruits: ["apple", "lemon", "mango"],
+    });
+  }
+
   return (
     <div>
+      <button onClick={handleButton14Click}>post 14 dto</button>
+      <hr />
+      <button onClick={handleButton13Click}>post 13 dto</button>
+      <hr />
       <button onClick={handleButton12Click}>post 12 arrayObject</button>
       <hr />
       <button onClick={handleButton11Click}>post 11 array</button>
