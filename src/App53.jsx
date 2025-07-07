@@ -57,8 +57,34 @@ function App53(props) {
     });
   }
 
+  function handleButton13Click() {
+    const searchParams = new URLSearchParams();
+    searchParams.set("name", "흥민");
+    searchParams.set("age", "33");
+    searchParams.set("address", "서울 강남");
+
+    axios.get("/api/main28/sub13", { params: searchParams });
+  }
+
+  function handleButton14Click() {
+    const searchParams = new URLSearchParams();
+    searchParams.set("city", "seoul");
+    searchParams.set("country", "korea");
+    searchParams.set("id", "22");
+
+    axios.get("/api/main28/sub14", { params: searchParams });
+  }
+
   return (
     <div>
+      <button onClick={handleButton14Click}>
+        요청 14 URLSearchParams 객체 활용{" "}
+      </button>
+      <hr />
+      <button onClick={handleButton13Click}>
+        요청 13 URLSearchParams 객체 활용{" "}
+      </button>
+      <hr />
       <button onClick={handleButton12Click}>요청 12 + query string</button>
       <hr />
       <button onClick={handleButton11Click}>요청 11 + query string</button>
