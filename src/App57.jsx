@@ -159,8 +159,28 @@ function App57(props) {
     });
   }
 
+  function handleButton23Click() {
+    axios
+      .get("/api/main32/sub23")
+      .then((res) => {
+        console.log("정상 동작");
+        console.log(res.status);
+      })
+      .catch((err) => {
+        console.log("동작 오류");
+        console.log(err.response.status);
+        if (err.response.status === 400) {
+          console.log("클라이언트 오류");
+        } else if (err.response.status === 500) {
+          console.log("서버 오류");
+        }
+      });
+  }
+
   return (
     <div>
+      <button onClick={handleButton23Click}>23 / 200, 400, 500 확률</button>
+      <hr />
       <button onClick={handleButton21Click}>21 / 201번 w/ data</button>
       <button onClick={handleButton22Click}>22 / 500번 w/ data</button>
       <hr />
