@@ -129,9 +129,45 @@ function App57(props) {
       });
   }
 
+  function handleButton19Click() {
+    axios.get("/api/main32/sub19").then((res) => {
+      console.log(res.data);
+    });
+  }
+
+  function handleButton20Click() {
+    axios.get("/api/main32/sub20").catch((err) => {
+      console.log(err.response.data);
+    });
+  }
+
+  function handleButton21Click() {
+    axios.get("/api/main32/sub21").then((res) => {
+      console.log("code 201");
+      console.log(res.data[0]);
+      console.log(res.data[1]);
+      console.log(res.data[2]);
+    });
+  }
+
+  function handleButton22Click() {
+    axios.get("/api/main32/sub22").catch((err) => {
+      console.log("code 500");
+      console.log(err.response.data[0]);
+      console.log(err.response.data[1]);
+      console.log(err.response.data[2]);
+    });
+  }
+
   return (
     <div>
+      <button onClick={handleButton21Click}>21 / 201번 w/ data</button>
+      <button onClick={handleButton22Click}>22 / 500번 w/ data</button>
       <hr />
+      <button onClick={handleButton19Click}>19 / 200번 w/ data</button>
+      <button onClick={handleButton20Click}>20 / 400번 w/ data</button>
+      <hr />
+
       <button onClick={handleButton17Click}>17 / 200번 대 응답</button>
       <button onClick={handleButton18Click}>18 / 500번 대 응답</button>
 
